@@ -35,6 +35,7 @@ document.addEventListener("mousemove", function(event){
 document.addEventListener('DOMContentLoaded', () => {
     const CursorInspects = document.querySelectorAll('#CursorInspect');
     const Pictures = document.querySelectorAll('.AboutPicture');
+    const NavBar = document.querySelectorAll('nav');
     const ball = document.querySelector('.ball');
 
     CursorInspects.forEach(container => {
@@ -47,27 +48,49 @@ document.addEventListener('DOMContentLoaded', () => {
         container.addEventListener('mouseleave', () => {
             ball.style.width = '5em';
             ball.style.height = '5em';
-            ball.style.zIndex = '0';
         });
     });
     Pictures.forEach(picture => {
       picture.addEventListener('mouseenter', () => {
           ball.style.width = '0em';
           ball.style.height = '0em';
-          ball.style.zIndex = '-1';
       });
 
       picture.addEventListener('mouseleave', () => {
           ball.style.width = '5em';
           ball.style.height = '5em';
-          ball.style.zIndex = '0';
       });
   });
-});
+  NavBar.forEach(navBar => {
+    navBar.addEventListener('mouseenter', () => {
+        ball.style.width = '0em';
+        ball.style.height = '0em';
+    });
 
+    navBar.addEventListener('mouseleave', () => {
+        ball.style.width = '5em';
+        ball.style.height = '5em';
+    });
+});
+});
+document.querySelectorAll('.NavLinks a').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetClass = this.getAttribute('data-target');
+      const targetElement = document.querySelector(targetClass);
+      if (targetElement) {
+          targetElement.scrollIntoView({
+              behavior: 'smooth'
+          });
+      }
+  });
+});
 var dob = new Date("03/21/2009");
 var month_diff = Date.now() - dob.getTime();
 var age_dt = new Date(month_diff);
 var year = age_dt.getUTCFullYear();
 var age = Math.abs(year - 1970);
 document.getElementById("age").innerHTML = age;
+
+
+

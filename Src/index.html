@@ -19,16 +19,17 @@
             <div id="BurgerLine"></div>
         </div>
         <div class="NavLinks">
-            <a href="">Home</a>
-            <a href="">Me</a>
-            <a href="">Tools</a>
-            <a href="">Projects</a>
-            <a href="">Contact</a>
+            <a href="#" data-target=".Intro">Home</a>
+            <a href="#" data-target=".About">Me</a>
+            <a href="" data-target=".ProgrammingHeader">Projects</a>
+            <a href="#" data-target=".Contact">Contact</a>
         </div>
     </nav>
+    
     <div class="Intro"> 
+        <button id="darkModeToggle">Toggle Dark Mode</button>
         <div class="TextContainer" id="CursorInspect">
-            <p id="MainText">a random dude who does what he likes to <br>  <span style="color: blue;">do</span></p>
+            <img id="logoInBeginning" src="Images/NewLogo.png" alt="">
         </div>
         <div class="TextContainer" id="CursorInspect">
             <p id="SmallText">Tibe VDB<br> 03/21/2009</p>
@@ -37,9 +38,10 @@
     <div class="About">
         <div class="AboutText">
             <p id="CursorInspect">Hello my name is Tibe Van den Brande I am <span id="age"></span> years old. <br><br>
-                As a kid I always wanted to create things like games. <br>
-                In 2020 I actually tried making a game for the first time. <br><br>
-                I also really like drawing. <br>
+                As a kid I always wanted to program things. <br>
+                In 2020 I actually tried making a game for the first time.
+                I mean didn't go really well but I mean atleast I tried.<br><br>
+                When I was a kid I drew alot. <br>
                 That passion turned into me learning how to 3d model.
             </p>
         </div>
@@ -47,10 +49,47 @@
             <div class="AboutPicture"></div>
         </div>
     </div>  
-    
-    <div class="Projects">
-
+    <h1 class="ProgrammingHeader">Programming</h1>
+    <div class="ProjectsProgramming">
+        <div class="Project" id="CursorInspect">
+            <img id="ProjectImg" src="Images/ItchioLogo.png" alt="">
+            <p id="ProjectText">All of my games that I released. <br><br>
+            (Public)</p>
+        </div>
+        <div class="Project" id="CursorInspect">
+            <img id="ProjectImg" src="Images/Platformer engine icon.png" alt="">
+            <p id="ProjectText">An asset for the unity game engine that helps game developers make platformer games easier. <br><br>
+            (Not finished yet)</p>
+        </div>
+        <div class="Project" id="CursorInspect">
+            <img id="ProjectImg" src="Images/PushTheCubeLogo.png" alt="">
+            <p id="ProjectText">A party game where your goal is the push other players of a platform. <br><br>
+            (Not finished yet)</p>
+        </div>
     </div> 
+    <h1 style="margin-top: 3em; margin-bottom: 3em;">3D modelling</h1>
+    <div class="Projects">
+        <div class="Project" style="background-color: transparent; box-shadow: none; margin-bottom: 10em;" id="CursorInspect">
+            <img id="ProjectImg" style="width: 100%;     box-shadow: 0px 0px 43px 12px rgba(0,0,0,0.75);" src="Images/Cassete.png" alt="">
+            <p id="ProjectText" style="color: black; font-size: 3em;">Cassete</p>
+        </div>
+        <div class="Project" style="background-color: transparent; box-shadow: none; margin-bottom: 10em;" id="CursorInspect">
+            <img id="ProjectImg" style="width: 100%;     box-shadow: 0px 0px 43px 12px rgba(0,0,0,0.75);" src="Images/Boombox.png" alt="">
+            <p id="ProjectText" style="color: black; font-size: 3em;">Boombox</p>
+        </div>
+        <div class="Project" style="background-color: transparent; box-shadow: none; margin-bottom: 10em;" id="CursorInspect">
+            <img id="ProjectImg" style="width: 100%;     box-shadow: 0px 0px 43px 12px rgba(0,0,0,0.75);" src="Images/GameBoy.png" alt="">
+            <p id="ProjectText" style="color: black; font-size: 3em;">Gameboy</p>
+        </div>
+        <div class="Project" style="background-color: transparent; box-shadow: none; margin-bottom: 10em;" id="CursorInspect">
+            <img id="ProjectImg" style="width: 100%;     box-shadow: 0px 0px 43px 12px rgba(0,0,0,0.75);" src="Images/TvTokyo.png" alt="">
+            <p id="ProjectText" style="color: black; font-size: 3em;">Tv</p>
+        </div>
+    </div> 
+    <div class="Contact">
+        <a href="https://www.youtube.com/channel/UCEa6ffhDc6Ye5gKmVifttaQ">YOUTUBE</a>
+        <a id="Email" href="">EMAIL</a>
+    </div>
     <div class="ball"></div>       
     <script src="app.js"></script>
 </body>

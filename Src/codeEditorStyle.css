@@ -72,6 +72,7 @@ textarea:focus{
 }
 .codeTabs{
     margin-top: 1em;
+    height: 100%;
 }
 .codeTabs button{
     border: none;
